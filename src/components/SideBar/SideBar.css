@@ -1,0 +1,7 @@
+aside {
+  width: 6%;
+  position: fixed;
+  height: 100vh;
+  border: 1px solid var(--border-color);
+  background-color: #f7f8fa;
+}

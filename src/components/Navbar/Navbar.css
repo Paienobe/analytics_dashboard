@@ -1,0 +1,85 @@
+nav {
+  position: fixed;
+  right: 0;
+  width: 94%;
+  padding: 1rem;
+  border-bottom: var(--thin-grey-border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+nav > section:first-of-type {
+  width: 61%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+nav > section:first-of-type > div {
+  width: 21.875rem;
+  border: var(--thin-grey-border);
+  padding: 0.7rem 1rem;
+  border-radius: 1.5rem;
+  display: flex;
+  align-items: center;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+nav > section:first-of-type > div:focus-within {
+  border: var(--thin-dark-border);
+}
+
+nav input {
+  width: 90%;
+  border: none;
+  background-color: transparent;
+}
+
+nav input::placeholder {
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+nav input:focus {
+  outline: none;
+}
+
+nav > section:last-of-type {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 37%;
+}
+
+nav > section:last-of-type > div:first-of-type {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+nav > section:last-of-type > div:first-of-type > div {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  border: var(--thin-grey-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+nav > section:last-of-type > div:last-of-type {
+  border: var(--thin-grey-border);
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.25rem 0.35rem;
+  border-radius: 1.5rem;
+}
+
+nav > section:last-of-type > div:last-of-type p:last-of-type {
+  color: #787486;
+  font-size: 0.875rem;
+}
