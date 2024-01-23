@@ -4,4 +4,53 @@ aside {
   height: 100vh;
   border: 1px solid var(--border-color);
   background-color: #f7f8fa;
+  padding: 1rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+aside > section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+aside > section:first-of-type > div,
+aside > section:last-of-type {
+  margin-top: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+aside > section button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+aside > section:last-of-type {
+  margin-top: 0;
+}
+
+aside > section:first-of-type > div:last-of-type {
+  background-color: white;
+  width: 45%;
+  border-radius: 1.5rem;
+  padding: 0.25rem 0;
+}
+
+.selected_theme {
+  background-color: var(--primary-color);
+  width: 1.875rem;
+  height: 1.875rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
