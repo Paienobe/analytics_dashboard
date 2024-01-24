@@ -5,3 +5,85 @@
   background-color: var(--tile-background);
   border-radius: var(--tile-border-radius);
 }
+
+.chart > div:first-of-type {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.chart > div:first-of-type > p {
+  font-size: 1.125rem;
+  font-weight: 500;
+}
+
+.chart > div:first-of-type > div,
+.chart > div:first-of-type > div > button {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.chart > div:first-of-type > div > button {
+  gap: 0.5rem;
+  background-color: transparent;
+  border: var(--thin-grey-border);
+  font-family: "Plus Jakarta Sans", sans-serif;
+  padding: 0.5rem;
+  border-radius: 1.25rem;
+}
+
+.chart > div:first-of-type > div > p {
+  font-size: 0.875rem;
+}
+
+.chart_main {
+  height: calc(100% - 2.188rem);
+  display: grid;
+  grid-template-columns: 1fr 9fr;
+  grid-template-rows: repeat(7, 1fr);
+  color: var(--gray-text);
+  padding-top: 1rem;
+}
+
+.range_holder {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  grid-row: 1/7;
+}
+
+.bar_holder {
+  grid-row: 1/7;
+}
+
+.bar_holder > div:first-of-type {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.bar_holder > div:first-of-type > hr {
+  display: block;
+  border: var(--thin-grey-border);
+  border-style: dashed;
+}
+
+.range_holder > p {
+  font-size: 0.75rem;
+}
+
+.month_holder {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  width: 90%;
+  margin-left: auto;
+  grid-column: 1/-1;
+  grid-row: 7/8;
+  align-self: self-end;
+}
+
+.month_holder > p {
+  font-size: 0.875rem;
+}

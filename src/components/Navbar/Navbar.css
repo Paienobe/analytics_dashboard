@@ -4,17 +4,20 @@ nav {
   width: 94%;
   padding: 1rem;
   border-bottom: var(--thin-grey-border);
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 2rem;
+  display: grid;
+  grid-template-columns: 6fr 4fr;
+  gap: 1.5rem;
 }
 
 nav > section:first-of-type {
-  width: 61%;
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+
+nav > section:first-of-type > p {
+  font-weight: 500;
+  font-size: 1.25rem;
 }
 
 nav > section:first-of-type > div {
@@ -27,6 +30,7 @@ nav > section:first-of-type > div {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  background-color: white;
 }
 
 nav > section:first-of-type > div:focus-within {
@@ -51,7 +55,6 @@ nav > section:last-of-type {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 37%;
 }
 
 nav > section:last-of-type > div:first-of-type {
