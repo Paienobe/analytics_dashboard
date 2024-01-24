@@ -1,0 +1,25 @@
+.top_platform {
+  background-color: var(--tile-background);
+  border-radius: var(--tile-border-radius);
+  padding: 1rem;
+}
+
+.top_platform > div:first-of-type {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.top_platform > div:first-of-type > p {
+  font-size: 1.125rem;
+  font-weight: 500;
+}
+
+.top_platform > div:first-of-type > button {
+  font-size: 1.125rem;
+  font-weight: 200;
+  color: var(--primary-color);
+  border: none;
+  background-color: transparent;
+}

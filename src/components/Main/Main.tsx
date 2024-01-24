@@ -2,6 +2,7 @@ import "./Main.css";
 import Chart from "../Chart/Chart";
 import ActivityGridContainer from "../ActivityGridContainer/ActivityGridContainer";
 import OrderTable from "../OrderTable/OrderTable";
+import TopPlatform from "../TopPlatform/TopPlatform";
 
 const Main = () => {
   return (
@@ -9,6 +10,7 @@ const Main = () => {
       <Chart />
       <ActivityGridContainer />
       <OrderTable />
+      <TopPlatform />
     </main>
   );
 };

@@ -1,0 +1,29 @@
+.platform_progress,
+.platform_progress > div {
+  min-height: 0.75rem;
+  border-radius: 2.5rem;
+  background-color: var(--bg-gray);
+}
+
+.platform_progress {
+  margin: 1rem 0;
+}
+
+.platform > div:last-of-type {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.platform:not(:last-of-type) {
+  margin-bottom: 1rem;
+}
+
+.platform > p {
+  font-size: 1.125rem;
+  font-weight: 500;
+}
+
+.platform > div:last-of-type p {
+  color: var(--dark-gray-text);
+}
