@@ -1,0 +1,31 @@
+.order_table {
+  background-color: var(--tile-background);
+  border-radius: var(--tile-border-radius);
+  min-height: 50vh;
+  padding: 1rem;
+}
+
+.order_table > div:first-of-type {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 1.125rem;
+}
+
+.order_table > div:first-of-type > button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  color: var(--primary-color);
+  font-size: 1.125rem;
+  font-weight: 200;
+}
+
+.table_head {
+  display: grid;
+  grid-template-columns: 3fr 2fr 2fr 2fr 1fr;
+  gap: 1rem;
+  color: var(--gray-text);
+  padding: 1.5rem 0;
+  border-bottom: var(--thin-grey-border);
+}

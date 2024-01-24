@@ -1,7 +1,7 @@
 .activity_tile {
   padding: 1rem;
   background-color: var(--tile-background);
-  border-radius: 0.875rem;
+  border-radius: var(--tile-border-radius);
 }
 
 .activity_tile > div:first-of-type {

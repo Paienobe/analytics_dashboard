@@ -1,0 +1,22 @@
+.order_table_row {
+  display: grid;
+  grid-template-columns: 3fr 2fr 2fr 2fr 1fr;
+  gap: 1rem;
+  padding: 1rem 0;
+}
+
+.order_table_row:not(:last-of-type) {
+  border-bottom: var(--thin-grey-border);
+}
+
+.order_table_row a {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.order_table_row > div:first-of-type {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}

@@ -44,11 +44,11 @@ const activities = [
 
 const ActivityGridContainer = () => {
   return (
-    <div className="activity_grid">
+    <section className="activity_grid">
       {activities.map((activity) => {
         return <ActivityTile key={activity.title} {...activity} />;
       })}
-    </div>
+    </section>
   );
 };
 

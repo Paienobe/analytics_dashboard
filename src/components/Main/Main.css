@@ -3,8 +3,7 @@ main {
   margin-left: auto;
   padding: 1rem;
   min-height: calc(100vh - 81px);
-  display: flex;
-  align-items: stretch;
-  justify-content: space-between;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: 6fr 4fr;
+  gap: 1rem;
 }

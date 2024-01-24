@@ -1,7 +1,7 @@
 import "./SideBar.css";
 import logo from "../../assets/logo.svg";
 import category from "../../assets/category.svg";
-import trend from "../../assets/trend-up.svg";
+import trend from "../../assets/menu-up.svg";
 import users from "../../assets/profile-2user.svg";
 import box from "../../assets/box.svg";
 import discount from "../../assets/discount-shape.svg";
