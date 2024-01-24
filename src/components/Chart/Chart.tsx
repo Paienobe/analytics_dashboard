@@ -1,7 +1,8 @@
 import "./Chart.css";
 import down from "../../assets/Arrow---Down-2.svg";
-import { months, priceRanges } from "./constants";
+import { monthlyPrices, months, priceRanges } from "./constants";
 import { addCommasToNumber } from "../../utils/addCommas";
+import { Tooltip } from "react-tooltip";
 
 const Chart = () => {
   return (
@@ -33,6 +34,26 @@ const Chart = () => {
             <hr />
             <hr />
             <hr />
+          </div>
+
+          <div className="bars_container">
+            {monthlyPrices.map((price) => {
+              const highestPrice = 50000;
+              const barHeight = (price / highestPrice) * 100;
+
+              return (
+                <div
+                  key={price}
+                  style={{ height: `${barHeight}%` }}
+                  className="chart_bar"
+                  data-tooltip-id={addCommasToNumber(price)}
+                  data-tooltip-content={addCommasToNumber(price)}
+                  data-tooltip-place="top"
+                ></div>
+              );
+            })}
+
+            <Tooltip anchorSelect=".chart_bar" />
           </div>
         </div>
 

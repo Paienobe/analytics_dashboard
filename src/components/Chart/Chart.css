@@ -55,6 +55,7 @@
 
 .bar_holder {
   grid-row: 1/7;
+  position: relative;
 }
 
 .bar_holder > div:first-of-type {
@@ -68,6 +69,27 @@
   display: block;
   border: var(--thin-grey-border);
   border-style: dashed;
+}
+
+.bars_container {
+  position: absolute;
+  width: 100%;
+  inset: 0;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  align-items: end;
+}
+
+.chart_bar {
+  min-width: 1.875rem;
+  max-width: 1.875rem;
+  background-color: var(--light-primary);
+  border-top-right-radius: 6.25rem;
+  border-top-left-radius: 6.25rem;
+}
+
+.chart_bar:hover {
+  background: linear-gradient(var(--primary-color), transparent);
 }
 
 .range_holder > p {
