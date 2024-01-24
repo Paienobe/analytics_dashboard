@@ -8,4 +8,9 @@
   --border-color: #ebecf2;
   --thin-grey-border: 1px solid var(--border-color);
   --thin-dark-border: 1px solid #171717;
+  --tile-background: #fff;
+  --gray-text: #787486;
+  --dark-gray-text: #606060;
+  --light-primary: rgba(52, 202, 165, 0.12);
+  --light-red: rgba(237, 84, 78, 0.12);
 }

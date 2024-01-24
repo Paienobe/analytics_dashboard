@@ -1,0 +1,48 @@
+.activity_tile {
+  padding: 1rem;
+  background-color: var(--tile-background);
+  border-radius: 0.875rem;
+}
+
+.activity_tile > div:first-of-type {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.activity_tile > p:first-of-type {
+  color: var(--gray-text);
+  margin: 0.75rem 0;
+  font-size: 1.125rem;
+}
+
+.activity_tile > p:last-of-type {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.activity_tile > div:last-of-type {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.875rem;
+  color: var(--dark-gray-text);
+}
+
+.activity_tile > div:last-of-type > div {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  border-radius: 62.5rem;
+  font-size: 0.75rem;
+  padding: 0.25rem 0.5rem;
+}
+
+.up_trend {
+  background-color: var(--light-primary);
+}
+
+.down_trend {
+  background-color: var(--light-red);
+}

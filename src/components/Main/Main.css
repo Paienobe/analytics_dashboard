@@ -1,0 +1,10 @@
+main {
+  width: 94%;
+  margin-left: auto;
+  padding: 1rem;
+  min-height: calc(100vh - 81px);
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}

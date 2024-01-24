@@ -1,5 +1,5 @@
 nav {
-  position: fixed;
+  margin-left: auto;
   right: 0;
   width: 94%;
   padding: 1rem;
@@ -80,6 +80,6 @@ nav > section:last-of-type > div:last-of-type {
 }
 
 nav > section:last-of-type > div:last-of-type p:last-of-type {
-  color: #787486;
+  color: var(--gray-text);
   font-size: 0.875rem;
 }
