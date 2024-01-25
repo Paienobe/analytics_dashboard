@@ -66,3 +66,10 @@ aside > section:first-of-type > div:last-of-type {
     gap: 1rem;
   }
 }
+
+@media (max-width: 850px) {
+  aside > section:first-of-type > div,
+  aside > section:last-of-type {
+    gap: 1.5rem;
+  }
+}

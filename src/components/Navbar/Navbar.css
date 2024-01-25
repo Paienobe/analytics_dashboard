@@ -101,3 +101,38 @@ nav > section:last-of-type > div:last-of-type p:last-of-type {
     width: 13rem;
   }
 }
+
+@media (max-width: 850px) {
+  nav {
+    grid-template-columns: 4fr 6fr;
+  }
+
+  nav > section:first-of-type > div {
+    width: 9rem;
+  }
+
+  nav > section:last-of-type > div:first-of-type {
+    gap: 0.5rem;
+    font-size: 0.75rem;
+  }
+}
+@media (max-width: 770px) {
+  nav {
+    grid-template-columns: 3.5fr 6.5fr;
+  }
+
+  nav > section:first-of-type > div {
+    width: 6.5rem;
+  }
+
+  nav > section:last-of-type > div:last-of-type {
+    border: var(--thin-grey-border);
+    display: flex;
+    align-items: center;
+    padding: 0.25rem 0.35rem;
+    border-radius: 1.5rem;
+
+    gap: 0.5rem;
+    font-size: 0.75rem;
+  }
+}
