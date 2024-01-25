@@ -7,3 +7,9 @@ main {
   grid-template-columns: 6fr 4fr;
   gap: 1rem;
 }
+
+@media (max-width: 1050px) {
+  main {
+    width: 90%;
+  }
+}

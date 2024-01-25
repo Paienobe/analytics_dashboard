@@ -109,3 +109,9 @@
 .month_holder > p {
   font-size: 0.875rem;
 }
+
+@media (max-width: 1050px) {
+  .chart {
+    grid-column: 1/-1;
+  }
+}

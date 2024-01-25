@@ -23,3 +23,10 @@
   border: none;
   background-color: transparent;
 }
+
+@media (max-width: 1050px) {
+  .top_platform {
+    grid-column: 2/3;
+    grid-row: 2/3;
+  }
+}

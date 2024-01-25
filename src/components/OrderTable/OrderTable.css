@@ -1,7 +1,6 @@
 .order_table {
   background-color: var(--tile-background);
   border-radius: var(--tile-border-radius);
-  min-height: 50vh;
   padding: 1rem;
 }
 
@@ -28,4 +27,14 @@
   color: var(--gray-text);
   padding: 1.5rem 0;
   border-bottom: var(--thin-grey-border);
+}
+
+@media (max-width: 1050px) {
+  .order_table {
+    grid-column: 1/-1;
+  }
+
+  .activity_tile > div:last-of-type {
+    flex-direction: column;
+  }
 }

@@ -90,3 +90,14 @@ nav > section:last-of-type > div:last-of-type p:last-of-type {
   color: var(--gray-text);
   font-size: 0.875rem;
 }
+
+@media (max-width: 1050px) {
+  nav {
+    grid-template-columns: 4.5fr 5.5fr;
+    width: 90%;
+  }
+
+  nav > section:first-of-type > div {
+    width: 13rem;
+  }
+}

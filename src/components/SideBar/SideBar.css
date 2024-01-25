@@ -55,3 +55,14 @@ aside > section:first-of-type > div:last-of-type {
   align-items: center;
   justify-content: center;
 }
+
+@media (max-width: 1050px) {
+  aside {
+    width: 10%;
+  }
+
+  aside > section:first-of-type > div,
+  aside > section:last-of-type {
+    gap: 1rem;
+  }
+}
