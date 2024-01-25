@@ -38,3 +38,21 @@
     flex-direction: column;
   }
 }
+
+@media (max-width: 480px) {
+  .order_table {
+    grid-row: 4/5;
+  }
+
+  .table_head {
+    width: 200%;
+  }
+
+  .activity_tile > div:last-of-type {
+    flex-direction: row;
+  }
+
+  .table_content {
+    overflow-x: scroll;
+  }
+}

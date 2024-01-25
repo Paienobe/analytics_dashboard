@@ -10,3 +10,11 @@
     height: unset;
   }
 }
+
+@media (max-width: 480px) {
+  .activity_grid {
+    grid-column: 1/-1;
+    grid-row: 2/3;
+    grid-template-columns: 1fr;
+  }
+}

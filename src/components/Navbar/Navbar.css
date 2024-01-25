@@ -136,3 +136,10 @@ nav > section:last-of-type > div:last-of-type p:last-of-type {
     font-size: 0.75rem;
   }
 }
+
+@media (max-width: 480px) {
+  nav {
+    width: 100%;
+    overflow-x: hidden;
+  }
+}

@@ -10,18 +10,20 @@ const OrderTable = () => {
         <button>See All</button>
       </div>
 
-      <div className="table_head">
-        <p>Name</p>
-        <p>Date</p>
-        <p>Amount</p>
-        <p>Status</p>
-        <p>Invoice</p>
-      </div>
+      <div className="table_content">
+        <div className="table_head">
+          <p>Name</p>
+          <p>Date</p>
+          <p>Amount</p>
+          <p>Status</p>
+          <p>Invoice</p>
+        </div>
 
-      <div>
-        {orders.map((order) => {
-          return <OrderTableRow key={order.id} {...order} />;
-        })}
+        <div>
+          {orders.map((order) => {
+            return <OrderTableRow key={order.id} {...order} />;
+          })}
+        </div>
       </div>
     </section>
   );

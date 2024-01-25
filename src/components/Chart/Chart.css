@@ -122,3 +122,17 @@
     height: 40vh;
   }
 }
+
+@media (max-width: 480px) {
+  .chart_bar {
+    min-width: 0.625rem;
+  }
+
+  .month_holder {
+    grid-template-columns: repeat(6, 1fr);
+  }
+
+  .month_holder > p:nth-of-type(odd) {
+    display: none;
+  }
+}
