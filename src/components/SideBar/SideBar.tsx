@@ -11,7 +11,7 @@ import settings from "../../assets/setting-2.svg";
 import exit from "../../assets/logout.svg";
 import Sun from "../SVGs/Sun";
 import Moon from "../SVGs/Moon";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import Menu from "../SVGs/Menu";
 import { toggleTheme } from "../../utils/themeToggles";
 
@@ -34,10 +34,6 @@ const SideBar = () => {
   const [selectedOption, setSelectedOption] = useState(items[0].name);
   const [theme, setTheme] = useState("light");
 
-  useEffect(() => {
-    toggleTheme();
-  }, [theme]);
-
   return (
     <aside>
       <section>
@@ -48,12 +44,18 @@ const SideBar = () => {
               <div
                 key={item.name}
                 className="button_parent"
-                onClick={() => setSelectedOption(item.name)}
+                onClick={() => {
+                  setSelectedOption(item.name);
+                }}
               >
                 {item.name == "category" ? (
                   <Menu />
                 ) : (
-                  <button onClick={() => setSelectedOption(item.name)}>
+                  <button
+                    onClick={() => {
+                      setSelectedOption(item.name);
+                    }}
+                  >
                     <img src={item.image} alt="" />
                   </button>
                 )}
@@ -67,16 +69,22 @@ const SideBar = () => {
         <div>
           <button
             className={`${theme == "light" ? "selected_theme" : ""} theme_btn`}
-            onClick={() => setTheme("light")}
+            onClick={() => {
+              setTheme("light");
+              toggleTheme(false);
+            }}
           >
-            <Sun color="white" />
+            <Sun color={theme == "dark" ? "#B2ABAB" : "white"} />
           </button>
 
           <button
             className={`${theme == "dark" ? "selected_theme" : ""} theme_btn`}
-            onClick={() => setTheme("dark")}
+            onClick={() => {
+              setTheme("dark");
+              toggleTheme(true);
+            }}
           >
-            <Moon color="#B2ABAB" />
+            <Moon color={theme == "dark" ? "white" : "#B2ABAB"} />
           </button>
         </div>
       </section>
