@@ -5,13 +5,18 @@ import { useThemeContext } from "../../context/ThemeContext/ThemeContext";
 import Calendar from "../SVGs/Calendar";
 import Bell from "../SVGs/Bell";
 import ArrowDown from "../SVGs/ArrowDown";
+import { RxHamburgerMenu } from "react-icons/rx";
+import logo from "../../assets/logo.svg";
+import { useGlobalContext } from "../../context/GlobalContext/GlobalContext";
 
 const Navbar = () => {
   const { theme } = useThemeContext();
+  const { showMenu, setShowMenu } = useGlobalContext();
   const iconColors: { [x: string]: string } = { light: "black", dark: "white" };
   return (
     <nav>
       <section>
+        <img src={logo} className="nav_logo" />
         <p>Dashboard</p>
 
         <div>
@@ -38,6 +43,15 @@ const Navbar = () => {
           <ArrowDown color={iconColors[theme]} />
         </div>
       </section>
+
+      <div className="mobile_nav_section">
+        <img src={profile_img} />
+        <RxHamburgerMenu
+          className="burger_btn"
+          size={25}
+          onClick={() => setShowMenu(!showMenu)}
+        />
+      </div>
     </nav>
   );
 };

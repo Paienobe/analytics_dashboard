@@ -11,10 +11,13 @@ import settings from "../../assets/setting-2.svg";
 import exit from "../../assets/logout.svg";
 import Sun from "../SVGs/Sun";
 import Moon from "../SVGs/Moon";
-import { useState } from "react";
+import { useRef, useState } from "react";
 import Menu from "../SVGs/Menu";
 import { toggleTheme } from "../../utils/themeToggles";
 import { useThemeContext } from "../../context/ThemeContext/ThemeContext";
+import { useGlobalContext } from "../../context/GlobalContext/GlobalContext";
+import { useOutsideClick } from "../../hooks/useOutsideClick";
+import { useScroll } from "../../hooks/useScroll";
 
 const items = [
   { name: "category", image: category },
@@ -33,7 +36,10 @@ const items2 = [
 
 const SideBar = () => {
   const { theme, setTheme } = useThemeContext();
+  const { showMenu } = useGlobalContext();
   const [selectedOption, setSelectedOption] = useState(items[0].name);
+
+  const sideBarRef = useRef(null);
 
   const moonIconColors: { [x: string]: string } = {
     light: "#B2ABAB",
@@ -45,10 +51,14 @@ const SideBar = () => {
     dark: "#B2ABAB",
   };
 
+  useOutsideClick(sideBarRef, "burger_btn");
+  useScroll();
+
   return (
-    <aside>
+    <aside className={showMenu ? "show_menu" : ""} ref={sideBarRef}>
       <section>
         <img src={logo} alt="" />
+
         <div>
           {items.map((item) => {
             return (

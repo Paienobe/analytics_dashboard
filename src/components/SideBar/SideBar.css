@@ -108,6 +108,28 @@ aside > section:first-of-type > div:last-of-type {
 
 @media (max-width: 480px) {
   aside {
+    height: calc(100vh - 5.563rem);
+    bottom: 0;
+    top: unset;
+    width: 20%;
+    z-index: 1;
+    left: -25%;
+  }
+
+  aside > section:first-of-type > img {
     display: none;
+  }
+
+  aside > section:first-of-type {
+    gap: 2rem;
+  }
+
+  aside > section:first-of-type > div,
+  aside > section:last-of-type {
+    margin-top: 0;
+  }
+
+  .show_menu {
+    left: 0;
   }
 }

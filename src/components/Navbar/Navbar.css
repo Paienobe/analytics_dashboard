@@ -91,6 +91,14 @@ nav > section:last-of-type > div:last-of-type p:last-of-type {
   font-size: 0.875rem;
 }
 
+.nav_logo {
+  display: none;
+}
+
+.mobile_nav_section {
+  display: none;
+}
+
 @media (max-width: 1050px) {
   nav {
     grid-template-columns: 4.5fr 5.5fr;
@@ -140,6 +148,28 @@ nav > section:last-of-type > div:last-of-type p:last-of-type {
 @media (max-width: 480px) {
   nav {
     width: 100%;
-    overflow-x: hidden;
+    padding: 1.5rem 1rem;
+  }
+
+  nav > section:first-of-type > div,
+  nav > section:last-of-type {
+    display: none;
+  }
+
+  .mobile_nav_section {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    justify-self: end;
+  }
+
+  .burger_btn {
+    display: block;
+    justify-self: end;
+  }
+
+  .nav_logo {
+    display: block;
+    margin-right: 1rem;
   }
 }

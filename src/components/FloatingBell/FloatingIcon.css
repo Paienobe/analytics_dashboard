@@ -1,0 +1,24 @@
+.floating_icon_parent {
+  display: none;
+}
+
+@media (max-width: 480px) {
+  .floating_icon_parent {
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .floating_icon {
+    width: 3.125rem;
+    height: 3.125rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--primary-color);
+  }
+}
