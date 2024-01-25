@@ -11,7 +11,7 @@ import settings from "../../assets/setting-2.svg";
 import exit from "../../assets/logout.svg";
 import Sun from "../SVGs/Sun";
 import Moon from "../SVGs/Moon";
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Menu from "../SVGs/Menu";
 import { toggleTheme } from "../../utils/themeToggles";
 import { useThemeContext } from "../../context/ThemeContext/ThemeContext";
@@ -53,6 +53,11 @@ const SideBar = () => {
 
   useOutsideClick(sideBarRef, "burger_btn");
   useScroll();
+
+  useEffect(() => {
+    const themeOptions: { [x: string]: boolean } = { light: false, dark: true };
+    toggleTheme(themeOptions[theme]);
+  }, [theme]);
 
   return (
     <aside className={showMenu ? "show_menu" : ""} ref={sideBarRef}>

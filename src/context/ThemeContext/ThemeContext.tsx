@@ -1,4 +1,10 @@
-import { ReactNode, createContext, useContext, useState } from "react";
+import {
+  ReactNode,
+  createContext,
+  useContext,
+  useEffect,
+  useState,
+} from "react";
 import { ThemeContextType } from "./types";
 
 const ThemeContext = createContext({} as ThemeContextType);
@@ -8,7 +14,13 @@ type Props = {
 };
 
 export const ThemeContextProvider = ({ children }: Props) => {
-  const [theme, setTheme] = useState("light");
+  const storedTheme = localStorage.getItem("dashboard_theme");
+
+  const [theme, setTheme] = useState(storedTheme || "light");
+
+  useEffect(() => {
+    localStorage.setItem("dashboard_theme", theme);
+  }, [theme]);
   return (
     <ThemeContext.Provider value={{ theme, setTheme }}>
       {children}
