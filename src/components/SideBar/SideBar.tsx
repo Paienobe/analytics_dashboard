@@ -49,7 +49,7 @@ const SideBar = () => {
                 }}
               >
                 {item.name == "category" ? (
-                  <Menu />
+                  <Menu color={theme == "light" ? "#0D062D" : "white"} />
                 ) : (
                   <button
                     onClick={() => {
