@@ -11,6 +11,7 @@ import settings from "../../assets/setting-2.svg";
 import exit from "../../assets/logout.svg";
 import Sun from "../SVGs/Sun";
 import Moon from "../SVGs/Moon";
+import { useState } from "react";
 
 const items = [
   { name: "category", image: category },
@@ -28,6 +29,7 @@ const items2 = [
 ];
 
 const SideBar = () => {
+  const [selectedOption, setSelectedOption] = useState(items[0].name);
   return (
     <aside>
       <section>
@@ -35,9 +37,13 @@ const SideBar = () => {
         <div>
           {items.map((item) => {
             return (
-              <button key={item.name}>
-                <img src={item.image} alt="" />
-              </button>
+              <div key={item.name} className="button_parent">
+                <button onClick={() => setSelectedOption(item.name)}>
+                  <img src={item.image} alt="" />
+                </button>
+
+                {selectedOption == item.name && <span></span>}
+              </div>
             );
           })}
         </div>
@@ -55,7 +61,11 @@ const SideBar = () => {
 
       <section>
         {items2.map((item) => {
-          return <img key={item.name} src={item.image} alt="" />;
+          return (
+            <button key={item.name}>
+              <img src={item.image} alt="" />
+            </button>
+          );
         })}
       </section>
     </aside>

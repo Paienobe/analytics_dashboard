@@ -27,12 +27,33 @@ aside > section:last-of-type {
   flex-direction: column;
   align-items: center;
   gap: 1.5rem;
+  width: 100%;
 }
 
 aside > section button {
   background-color: transparent;
   border: none;
   cursor: pointer;
+}
+
+.button_parent {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button_parent > span {
+  min-width: 0.156rem;
+  min-height: 100%;
+  background-color: black;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  border-top-left-radius: 1rem;
+  border-bottom-left-radius: 1rem;
 }
 
 aside > section:last-of-type {
@@ -71,5 +92,9 @@ aside > section:first-of-type > div:last-of-type {
   aside > section:first-of-type > div,
   aside > section:last-of-type {
     gap: 1.5rem;
+  }
+
+  aside > section:first-of-type > div:last-of-type {
+    width: 50%;
   }
 }
