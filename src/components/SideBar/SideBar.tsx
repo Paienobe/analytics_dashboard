@@ -11,7 +11,9 @@ import settings from "../../assets/setting-2.svg";
 import exit from "../../assets/logout.svg";
 import Sun from "../SVGs/Sun";
 import Moon from "../SVGs/Moon";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import Menu from "../SVGs/Menu";
+import { toggleTheme } from "../../utils/themeToggles";
 
 const items = [
   { name: "category", image: category },
@@ -30,6 +32,12 @@ const items2 = [
 
 const SideBar = () => {
   const [selectedOption, setSelectedOption] = useState(items[0].name);
+  const [theme, setTheme] = useState("light");
+
+  useEffect(() => {
+    toggleTheme();
+  }, [theme]);
+
   return (
     <aside>
       <section>
@@ -37,10 +45,18 @@ const SideBar = () => {
         <div>
           {items.map((item) => {
             return (
-              <div key={item.name} className="button_parent">
-                <button onClick={() => setSelectedOption(item.name)}>
-                  <img src={item.image} alt="" />
-                </button>
+              <div
+                key={item.name}
+                className="button_parent"
+                onClick={() => setSelectedOption(item.name)}
+              >
+                {item.name == "category" ? (
+                  <Menu />
+                ) : (
+                  <button onClick={() => setSelectedOption(item.name)}>
+                    <img src={item.image} alt="" />
+                  </button>
+                )}
 
                 {selectedOption == item.name && <span></span>}
               </div>
@@ -49,13 +65,19 @@ const SideBar = () => {
         </div>
 
         <div>
-          <div className="selected_theme">
+          <button
+            className={`${theme == "light" ? "selected_theme" : ""} theme_btn`}
+            onClick={() => setTheme("light")}
+          >
             <Sun color="white" />
-          </div>
+          </button>
 
-          <div>
+          <button
+            className={`${theme == "dark" ? "selected_theme" : ""} theme_btn`}
+            onClick={() => setTheme("dark")}
+          >
             <Moon color="#B2ABAB" />
-          </div>
+          </button>
         </div>
       </section>
 

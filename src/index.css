@@ -14,4 +14,6 @@
   --light-primary: rgba(52, 202, 165, 0.12);
   --light-red: rgba(237, 84, 78, 0.12);
   --tile-border-radius: 0.875rem;
+  --text-color: #000;
+  --alternate-bg: #f7f8fa;
 }

@@ -31,6 +31,7 @@
   font-family: "Plus Jakarta Sans", sans-serif;
   padding: 0.5rem;
   border-radius: 1.25rem;
+  color: var(--text-color);
 }
 
 .chart > div:first-of-type > div > p {
