@@ -14,6 +14,7 @@ import Moon from "../SVGs/Moon";
 import { useState } from "react";
 import Menu from "../SVGs/Menu";
 import { toggleTheme } from "../../utils/themeToggles";
+import { useThemeContext } from "../../context/ThemeContext/ThemeContext";
 
 const items = [
   { name: "category", image: category },
@@ -31,8 +32,18 @@ const items2 = [
 ];
 
 const SideBar = () => {
+  const { theme, setTheme } = useThemeContext();
   const [selectedOption, setSelectedOption] = useState(items[0].name);
-  const [theme, setTheme] = useState("light");
+
+  const moonIconColors: { [x: string]: string } = {
+    light: "#B2ABAB",
+    dark: "white",
+  };
+
+  const sunIconColors: { [x: string]: string } = {
+    light: "white",
+    dark: "#B2ABAB",
+  };
 
   return (
     <aside>
@@ -74,7 +85,7 @@ const SideBar = () => {
               toggleTheme(false);
             }}
           >
-            <Sun color={theme == "dark" ? "#B2ABAB" : "white"} />
+            <Sun color={sunIconColors[theme]} />
           </button>
 
           <button
@@ -84,7 +95,7 @@ const SideBar = () => {
               toggleTheme(true);
             }}
           >
-            <Moon color={theme == "dark" ? "white" : "#B2ABAB"} />
+            <Moon color={moonIconColors[theme]} />
           </button>
         </div>
       </section>

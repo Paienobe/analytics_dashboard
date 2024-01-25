@@ -38,7 +38,7 @@ nav > section:first-of-type > div {
 }
 
 nav > section:first-of-type > div:focus-within {
-  border: var(--thin-dark-border);
+  border: 1px solid var(--text-color);
 }
 
 nav input {

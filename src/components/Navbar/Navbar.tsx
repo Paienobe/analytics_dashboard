@@ -1,11 +1,14 @@
 import "./Navbar.css";
 import search from "../../assets/Icon - Search.svg";
-import calendar from "../../assets/calendar.svg";
-import bell from "../../assets/solar_bell-outline.svg";
 import profile_img from "../../assets/Profile.svg";
-import down from "../../assets/Arrow---Down-2.svg";
+import { useThemeContext } from "../../context/ThemeContext/ThemeContext";
+import Calendar from "../SVGs/Calendar";
+import Bell from "../SVGs/Bell";
+import ArrowDown from "../SVGs/ArrowDown";
 
 const Navbar = () => {
+  const { theme } = useThemeContext();
+  const iconColors: { [x: string]: string } = { light: "black", dark: "white" };
   return (
     <nav>
       <section>
@@ -19,10 +22,10 @@ const Navbar = () => {
 
       <section>
         <div>
-          <img src={calendar} alt="" />
+          <Calendar color={iconColors[theme]} />
           November 15, 2023
           <div>
-            <img src={bell} alt="" />
+            <Bell color={iconColors[theme]} />
           </div>
         </div>
 
@@ -32,7 +35,7 @@ const Navbar = () => {
             <p>Justin Bergson</p>
             <p>Justin@gmail.com</p>
           </div>
-          <img src={down} alt="" />
+          <ArrowDown color={iconColors[theme]} />
         </div>
       </section>
     </nav>

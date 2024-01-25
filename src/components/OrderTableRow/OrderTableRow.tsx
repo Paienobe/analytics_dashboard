@@ -1,6 +1,7 @@
 import "./OrderTableRow.css";
 import { OrderTableRowProps } from "./types";
-import invoice_icon from "../../assets/document-download.svg";
+import Download from "../SVGs/Download";
+import { useThemeContext } from "../../context/ThemeContext/ThemeContext";
 
 const OrderTableRow = ({
   amount,
@@ -10,10 +11,12 @@ const OrderTableRow = ({
   status,
   username,
 }: OrderTableRowProps) => {
+  const { theme } = useThemeContext();
   const statusColors: { [x: string]: string } = {
     Refund: "#ED544E",
     Paid: "#34CAA5",
   };
+  const iconColors: { [x: string]: string } = { light: "black", dark: "white" };
 
   return (
     <div className="order_table_row">
@@ -32,7 +35,8 @@ const OrderTableRow = ({
       </div>
       <div>
         <a href={invoice} download>
-          <img src={invoice_icon} alt="" /> View
+          <Download color={iconColors[theme]} />
+          View
         </a>
       </div>
     </div>

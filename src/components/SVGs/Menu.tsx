@@ -1,6 +1,6 @@
-type Props = { color: string };
+import { SvgProps } from "./types";
 
-const Menu = ({ color }: Props) => {
+const Menu = ({ color }: SvgProps) => {
   return (
     <svg
       width="24"

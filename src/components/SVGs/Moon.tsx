@@ -1,8 +1,6 @@
-type Props = {
-  color: string;
-};
+import { SvgProps } from "./types";
 
-const Moon = ({ color }: Props) => {
+const Moon = ({ color }: SvgProps) => {
   return (
     <svg
       width="30"
